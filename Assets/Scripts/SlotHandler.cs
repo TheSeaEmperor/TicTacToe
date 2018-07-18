@@ -22,7 +22,10 @@ public class SlotHandler : MonoBehaviour, IDropHandler
     {
         if (!item)
         {
-            DragHandler.draggableobject.transform.SetParent(transform);
+            if (DragHandler.ismoveable)
+            {
+                DragHandler.draggableobject.transform.SetParent(transform);
+            }
         }
     }
 }
