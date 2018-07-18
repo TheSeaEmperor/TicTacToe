@@ -8,7 +8,7 @@ using UnityEngine.UI;
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public static GameObject draggableobject;
-    public static bool ismoveable;
+    public bool ismoveable;
     private Vector3 start_pos;
     private Transform start_parent;
     private Transform root_parent;

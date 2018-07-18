@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 
 public class SlotHandler : MonoBehaviour, IDropHandler
 {
+
     public GameObject item
     {
         get
@@ -22,7 +23,7 @@ public class SlotHandler : MonoBehaviour, IDropHandler
     {
         if (!item)
         {
-            if (DragHandler.ismoveable)
+            if (DragHandler.draggableobject.GetComponent<DragHandler>().ismoveable)
             {
                 DragHandler.draggableobject.transform.SetParent(transform);
             }
