@@ -6,6 +6,8 @@ TagManager:
   tags:
   - X_Piece
   - O_Piece
+  - X_Slot
+  - O_Slot
   layers:
   - Default
   - TransparentFX

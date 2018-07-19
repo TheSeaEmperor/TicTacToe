@@ -8,6 +8,7 @@ using UnityEngine.UI;
 public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     public static GameObject draggableobject;
+    public GameObject piece_prefab;
     public bool ismoveable;
     private Vector3 start_pos;
     private Transform start_parent;
@@ -54,6 +55,16 @@ public class DragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndD
             transform.SetParent(start_parent);
         }
         GetComponent<CanvasGroup>().blocksRaycasts = true;
+        ReplacePieces();
+    }
+
+    public void ReplacePieces()
+    {
+        //Checks if the Piece Starting Position currenly contains a piece and creates one if not
+        if (root_parent.childCount == 0)
+        {
+            Instantiate(piece_prefab, root_parent);
+        }
     }
 
 

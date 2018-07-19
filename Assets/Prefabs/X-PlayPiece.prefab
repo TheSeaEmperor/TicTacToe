@@ -85,6 +85,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 95489e54af835d046832034c13a7b510, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  piece_prefab: {fileID: 1340946887239936}
   ismoveable: 0
 --- !u!114 &114958862349351008
 MonoBehaviour:
